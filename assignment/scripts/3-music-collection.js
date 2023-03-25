@@ -10,15 +10,15 @@ let collection = [];
 // Return the newly created object
 
 function addToCollection(title, artist, yearPublished) {
-    console.log('in addToCollection:');
     collection = [];
+    console.log('in addToCollection:');
     let newAlbum = {
         title: title,
         artist: artist,
         yearPublished: yearPublished
       };
       collection.push(newAlbum);
-    return collection;
+    return collection[collection.length-1];
   } // end addToCollection
   
 console.log('Collection now:', collection);
@@ -52,7 +52,7 @@ console.log(`Collection now is: ${JSON.stringify(collection)}`);
 
 function showCollection (anArray){
     console.log('in showCollection: The number of items is -->', anArray.length);
-    console. log("\n\n COLLECTION CONTENTS: \n\n");
+    console. log("\n Showing collection!: \n");
     for (let album of anArray) {
         console.log(`${album.title} by ${album.artist} published in ${album.yearPublished}`);  
     } // end for 
@@ -60,7 +60,9 @@ function showCollection (anArray){
 
 // Test the `showCollection` function.
 
+
 (showCollection(collection));
+console. log("\n Testing showCollection: \n");
 console.log(`${jazzAlbum1.title} by ${jazzAlbum1.artist} published in ${jazzAlbum1.yearPublished}`);
 console.log(`${jazzAlbum2.title} by ${jazzAlbum2.artist} published in ${jazzAlbum2.yearPublished}`);
 console.log(`${jazzAlbum3.title} by ${jazzAlbum3.artist} published in ${jazzAlbum3.yearPublished}`);
@@ -88,6 +90,7 @@ function findByArtist(anArtist) {
 // Test the `findByArtist` function. Make sure to test with an artist you know is in the collection,
 // as well as an artist you know is not in your collection. Check that for artists with multiple matches, all are found.
 
+console. log("\n Testing findByArtist: \n");
 console. log('findByArtist test:', findByArtist('Louis Armstrong'));
 console. log('findByArtist test:', findByArtist('Billie Holiday'));
 console. log('findByArtist test:', findByArtist('Miles Davis'));
